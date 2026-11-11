@@ -1,0 +1,8 @@
+.mrow { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.mrow:last-child { border-bottom: 0; }
+.mrow-main { min-width: 0; }
+.mrow-title { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-weight: 600; font-size: 16px; }
+.mrow-title a { color: var(--ink); }
+.mrow-meta { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 4px; color: var(--muted); font-size: 13px; }
+.mrow-meta span { display: inline-flex; align-items: center; gap: 5px; }
+.mrow-pending { color: var(--live); font-weight: 600; }

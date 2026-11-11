@@ -1,0 +1,36 @@
+.md-back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+.md-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+.md-head h1 { font-size: 34px; }
+.md-meta { color: var(--muted); margin-top: 6px; }
+.md-people { margin-top: 2px; font-size: 14px; }
+.md-actions { display: flex; gap: 10px; }
+.md-agenda { margin-top: 16px; padding: 12px 16px; background: var(--surface); border-left: 3px solid var(--signal); border-radius: 0 var(--radius) var(--radius) 0; max-width: 70ch; }
+
+.md-tabs { display: flex; gap: 4px; margin: 28px 0 22px; border-bottom: 1px solid var(--line); }
+.md-tab { background: none; border: 0; padding: 10px 16px; cursor: pointer; font-weight: 600; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -1px; }
+.md-tab:hover { color: var(--ink); }
+.md-tab.on { color: var(--ink); border-bottom-color: var(--signal); }
+
+.md-regen { margin-bottom: 18px; }
+.md-block { margin-bottom: 28px; }
+.md-block h2 { font-size: 20px; margin-bottom: 10px; }
+.md-summary { font-size: 17px; max-width: 70ch; }
+.md-block ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 70ch; }
+.md-two { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+.md-actions-list { list-style: none; padding: 0 !important; max-width: 760px !important; gap: 0 !important; }
+.md-actions-list li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.md-actions-list label { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.md-actions-list input { margin-top: 5px; width: 17px; height: 17px; accent-color: var(--signal); }
+.md-actions-list .done .md-task { text-decoration: line-through; color: var(--muted); }
+.md-owner { color: var(--muted); font-size: 13px; white-space: nowrap; padding-top: 2px; }
+
+.md-log { max-width: 780px; }
+.md-log p { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.md-log time { color: var(--muted); font-size: 12px; margin-right: 8px; font-variant-numeric: tabular-nums; }
+.md-log strong { margin-right: 6px; }
+
+@media (max-width: 720px) {
+  .md-two { grid-template-columns: 1fr; gap: 0; }
+  .md-actions-list li { flex-direction: column; gap: 4px; }
+}

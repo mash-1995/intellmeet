@@ -1,0 +1,22 @@
+.ws-head h1 { font-size: 34px; }
+.ws-head p { color: var(--muted); margin: 6px 0 26px; max-width: 60ch; }
+
+.ws-forms { display: grid; grid-template-columns: 1.3fr 1fr; gap: 20px; margin-bottom: 36px; }
+.ws-form { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.ws-form h2 { font-size: 19px; margin-bottom: 14px; }
+
+.ws-list > h2 { font-size: 22px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+.ws-item { padding: 20px 0; border-bottom: 1px solid var(--line); display: grid; gap: 14px; justify-items: start; width: 100%; }
+.ws-item-top { display: flex; justify-content: space-between; gap: 20px; width: 100%; flex-wrap: wrap; }
+.ws-item h3 { font-size: 20px; }
+.ws-desc { color: var(--muted); margin-top: 2px; }
+
+.ws-code { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; font-size: 12px; color: var(--muted); }
+.ws-code button { display: inline-flex; gap: 8px; align-items: center; background: var(--signal-tint); border: 1px dashed var(--signal); border-radius: 8px; padding: 6px 10px; cursor: pointer; color: var(--signal-dark); }
+.ws-code code { font-size: 15px; font-weight: 600; letter-spacing: 0.08em; }
+
+.ws-members { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.ws-member { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; }
+.ws-member .avatar { width: 26px; height: 26px; font-size: 11px; }
+
+@media (max-width: 760px) { .ws-forms { grid-template-columns: 1fr; } }

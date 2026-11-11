@@ -1,0 +1,6 @@
+.modal-backdrop { position: fixed; inset: 0; background: rgba(20, 33, 61, 0.55); display: grid; place-items: center; padding: 20px; z-index: 50; }
+.modal { background: var(--surface); border-radius: 14px; padding: 28px; width: 100%; max-width: 520px; box-shadow: 0 24px 60px rgba(20, 33, 61, 0.35); }
+.modal h2 { margin-bottom: 18px; font-size: 24px; }
+.modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+@media (max-width: 520px) { .modal-row { grid-template-columns: 1fr; } }
