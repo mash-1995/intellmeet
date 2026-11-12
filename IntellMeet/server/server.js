@@ -13,7 +13,7 @@ const registerSockets = require('./sockets');
 const { notFound, errorHandler } = require('./middleware/error');
 
 if (!process.env.JWT_SECRET) {
-  console.error('JWT_SECRET is missing. Copy server/.env.example to server/.env and fill it in.');
+  console.error('JWT_SECRET is missing.');
   process.exit(1);
 }
 
@@ -35,13 +35,6 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/meetings', require('./routes/meetingRoutes'));
 app.use('/api/workspaces', require('./routes/workspaceRoutes'));
 app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
-
-// Serve the React build in production
-if (process.env.NODE_ENV === 'production') {
-  const build = path.join(__dirname, '..', 'client', 'build');
-  app.use(express.static(build));
-  app.get('*', (req, res, next) => (req.originalUrl.startsWith('/api') ? next() : res.sendFile(path.join(build, 'index.html'))));
-}
 
 app.use(notFound);
 app.use(errorHandler);
